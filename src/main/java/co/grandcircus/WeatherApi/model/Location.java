@@ -1,5 +1,9 @@
 package co.grandcircus.WeatherApi.model;
-
+/**
+ * 
+ * @author >>RanaSiroosian<<
+ *
+ */
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Location {

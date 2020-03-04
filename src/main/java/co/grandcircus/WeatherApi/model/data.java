@@ -1,5 +1,9 @@
 package co.grandcircus.WeatherApi.model;
-
+/**
+ * 
+ * @author >>RanaSiroosian<<
+ *
+ */
 import java.util.List;
 
 public class data {

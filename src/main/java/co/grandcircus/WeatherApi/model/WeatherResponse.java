@@ -1,7 +1,10 @@
 package co.grandcircus.WeatherApi.model;
 
-import java.util.List;
-
+/**
+ * 
+ * @author >>RanaSiroosian<<
+ *
+ */
 
 public class WeatherResponse {
 	

@@ -12,6 +12,11 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import co.grandcircus.WeatherApi.model.WeatherResponse;
+/**
+ * 
+ * @author >>RanaSiroosian<<
+ *
+ */
 @Component
 public class ApiService {
 	
