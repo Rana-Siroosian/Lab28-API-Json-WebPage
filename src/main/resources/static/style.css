@@ -1,0 +1,46 @@
+@charset "ISO-8859-1";
+
+h5 {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+h2 {
+	text-shadow: 2px 2px #0080ff;
+	font-family: 'Ewert';
+	font-size: 50px;
+}
+
+h3 {
+	font-family: 'Eater';
+	font-size: 50px;
+}
+
+h5 {
+	line-height: 1.6;
+	color: white;
+	text-decoration: overline;
+}
+
+span.ex1 {
+	-webkit-box-decoration-break: clone;
+	-o-box-decoration-break: clone;
+	box-decoration-break: clone;
+}
+
+body {
+	background-color: #000080;
+}
+
+button {
+  background-color: #ffff00; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
