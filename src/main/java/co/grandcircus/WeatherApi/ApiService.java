@@ -2,15 +2,13 @@ package co.grandcircus.WeatherApi;
 
 import java.util.List;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
+import co.grandcircus.WeatherApi.model.Time;
 import co.grandcircus.WeatherApi.model.WeatherResponse;
 /**
  * 
@@ -34,15 +32,16 @@ public class ApiService {
 		
 		String url = "https://forecast.weather.gov/MapClick.php?lat="+lat+"&lon="+lon+"&FcstType=json";
 	
-		WeatherResponse response = rt.getForObject(url, WeatherResponse.class);;
-//		try {
-//			response = rt.getForObject(url, WeatherResponse.class);
-//		}catch(RestClientException r) {
-//			System.out.println("URL not found!");
-//		}
+		WeatherResponse response = rt.getForObject(url, WeatherResponse.class);
+
 	
 		return response;
 	}
 	
-	
+//	public Time findTime (String lat, String lon){
+//		String url = "https://forecast.weather.gov/MapClick.php?lat="+lat+"&lon="+lon+"&FcstType=json";
+//
+//		Time time = rt.getForObject(url, Time.class);
+//		return time;
+//	}
 }

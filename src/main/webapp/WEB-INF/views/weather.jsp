@@ -19,15 +19,27 @@
 		<form action="/">
 			<section class="jumbotron">
 			
-				<h3>${ weather.location }</h3>
-
+	<h2>${location }</h2>
 			</section>
-			<!-- <section class="container-fluid"> -->
-			<fieldset>
-				<h5>${ weather.data }</h5>
-				</fieldset>
-			<!-- </section> -->
+			<table class="table table-striped">
+			<thead>
+  <tr>
+    <th>Day</th>
+    <th>Weather</th>
+  </tr>
+  </thead>
+  <tbody>
+  			<c:forEach var="wea" items="${weather }">
+  
+  <tr>
+    <td>${ wea.day }</td>
+    <td>${wea.weatherStatus }</td>
+  </tr>
+  	</c:forEach>
+  </tbody>
+</table>
 
+				
 			<button type="submit" class="btn btn-warning">Home Page</button>
 		</form>
 	</main>

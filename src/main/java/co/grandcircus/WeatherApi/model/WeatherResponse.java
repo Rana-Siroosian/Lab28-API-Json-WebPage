@@ -8,10 +8,16 @@ package co.grandcircus.WeatherApi.model;
 
 public class WeatherResponse {
 	
-	private data data;
+	public data data;
 	private Location location;
+	public Time time;
 	
-	
+	public Time getTime() {
+		return time;
+	}
+	public void setTime(Time time) {
+		this.time = time;
+	}
 	public data getData() {
 		return data;
 	}
@@ -26,8 +32,9 @@ public class WeatherResponse {
 	}
 	@Override
 	public String toString() {
-		return "WeatherResponse [data=" + data + ", location=" + location + "]";
+		return "WeatherResponse [data=" + data + ", location=" + location + ", time=" + time + "]";
 	}
+	
 	
 	
 	
