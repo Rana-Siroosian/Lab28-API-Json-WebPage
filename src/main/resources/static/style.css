@@ -33,20 +33,22 @@ body {
 }
 
 button {
-  background-color: #ffff00; /* Green */
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+	background-color: #ffff00; /* Green */
+	border: none;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
 }
-td{
-	color:white;
+
+td {
+	color: white;
 }
-th{
-	color:white;
+
+th {
+	color: white;
 }

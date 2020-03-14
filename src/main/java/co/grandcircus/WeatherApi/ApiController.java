@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import co.grandcircus.WeatherApi.model.Forecast;
 import co.grandcircus.WeatherApi.model.Time;
 import co.grandcircus.WeatherApi.model.WeatherResponse;
+
 /**
  * 
  * @author >>RanaSiroosian<<
@@ -19,29 +20,29 @@ import co.grandcircus.WeatherApi.model.WeatherResponse;
  */
 @Controller
 public class ApiController {
-	
-	@Autowired 
+
+	@Autowired
 	private ApiService apiServ;
-	
+
 	@RequestMapping("/")
 	public ModelAndView home() {
 		return new ModelAndView("request");
 	}
-	
-	@RequestMapping("/weather")
-	public ModelAndView showWeather(@RequestParam("latitude") String lat,
-			@RequestParam("longitude") String lon,Time time) {
-		WeatherResponse res = apiServ.findLocation(lat, lon);
-		List<Forecast> forecast= new ArrayList<>();
-		int len = res.data.text.length;
-		for (int i=0; i<len;i++) {
-			forecast.add(new Forecast (res.time.startPeriodName[i], res.data.text[i]));
-		}
-		ModelAndView mav = new ModelAndView ("weather");
 
-		System.out.println("forecast"+forecast);
+	@RequestMapping("/weather")
+	public ModelAndView showWeather(@RequestParam("latitude") String lat, @RequestParam("longitude") String lon,
+			Time time) {
+		WeatherResponse res = apiServ.findLocation(lat, lon);
+		List<Forecast> forecast = new ArrayList<>();
+		int len = res.data.text.length;
+		for (int i = 0; i < len; i++) {
+			forecast.add(new Forecast(res.time.startPeriodName[i], res.data.text[i]));
+		}
+		ModelAndView mav = new ModelAndView("weather");
+
+		System.out.println("forecast" + forecast);
 		mav.addObject("weather", forecast);
-		mav.addObject("location",res.getLocation());
+		mav.addObject("location", res.getLocation());
 		return mav;
 	}
 }

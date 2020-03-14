@@ -18,28 +18,28 @@
 	<main class="container">
 		<form action="/">
 			<section class="jumbotron">
-			
-	<h2>${location }</h2>
+
+				<h2>${location }</h2>
 			</section>
 			<table class="table table-striped">
-			<thead>
-  <tr>
-    <th>Day</th>
-    <th>Weather</th>
-  </tr>
-  </thead>
-  <tbody>
-  			<c:forEach var="wea" items="${weather }">
-  
-  <tr>
-    <td>${ wea.day }</td>
-    <td>${wea.weatherStatus }</td>
-  </tr>
-  	</c:forEach>
-  </tbody>
-</table>
+				<thead>
+					<tr>
+						<th>Day</th>
+						<th>Weather</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="wea" items="${weather }">
 
-				
+						<tr>
+							<td>${ wea.day }</td>
+							<td>${wea.weatherStatus }</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+
+
 			<button type="submit" class="btn btn-warning">Home Page</button>
 		</form>
 	</main>

@@ -8,8 +8,8 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import co.grandcircus.WeatherApi.model.Time;
 import co.grandcircus.WeatherApi.model.WeatherResponse;
+
 /**
  * 
  * @author >>RanaSiroosian<<
@@ -17,7 +17,7 @@ import co.grandcircus.WeatherApi.model.WeatherResponse;
  */
 @Component
 public class ApiService {
-	
+
 	private RestTemplate rt;
 
 	{
@@ -27,21 +27,14 @@ public class ApiService {
 		};
 		rt = new RestTemplateBuilder().additionalInterceptors(interceptor).build();
 	}
-	
-	public WeatherResponse findLocation (String lat, String lon){
-		
-		String url = "https://forecast.weather.gov/MapClick.php?lat="+lat+"&lon="+lon+"&FcstType=json";
-	
+
+	public WeatherResponse findLocation(String lat, String lon) {
+
+		String url = "https://forecast.weather.gov/MapClick.php?lat=" + lat + "&lon=" + lon + "&FcstType=json";
+
 		WeatherResponse response = rt.getForObject(url, WeatherResponse.class);
 
-	
 		return response;
 	}
-	
-//	public Time findTime (String lat, String lon){
-//		String url = "https://forecast.weather.gov/MapClick.php?lat="+lat+"&lon="+lon+"&FcstType=json";
-//
-//		Time time = rt.getForObject(url, Time.class);
-//		return time;
-//	}
+
 }
